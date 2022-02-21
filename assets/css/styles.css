@@ -4,11 +4,46 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-accent: #9896F6;
+}
+
 body {
     overflow-x: hidden;
 }
 
-.section {
-    min-height: 100vh;
-    height: fit-content;
+section {
+    height: 100vh;
+}
+
+
+/* Cursor */
+/* this is really fucking hacky dont look at this pls lmfao */
+#cursor {
+    position: absolute;
+}
+
+.cursor-elipse {
+    border-radius: 50%;
+    position: absolute;
+}
+
+#cursor-dot {
+    width: .75em;
+    height: .75em;
+    background-color: var(--main-accent);
+    transform: translateY(-50%) translateX(-50%);
+    mix-blend-mode: difference;
+}
+#cursor-circle {
+    width: 2.5em;
+    height: 2.5em;
+    border: .15em solid var(--main-accent);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.grown {
+    width: 2.25em!important;
+    height: 2.25em!important;
+    transition: width 2.5s height 2.5s;
 }
